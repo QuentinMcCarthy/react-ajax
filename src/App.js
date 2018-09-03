@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
 	}
 
 	componentDidMount(){
-		fetch(`https://api.example.com/items`)
+		fetch(`https://my.api.mockaroo.com/users.json?key=e5eeada0`)
 			.then(res => res.json())
 			.then(
 				(result) => {
@@ -45,8 +45,8 @@ class App extends Component {
 			return(
 				<ul>
 					{items.map(item => (
-						<li key={item.name}>
-							{item.name} {item.price}
+						<li key={item.id}>
+							{item.first_name} {item.last_name}
 						</li>
 					))}
 				</ul>
