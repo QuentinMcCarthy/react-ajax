@@ -14,7 +14,7 @@ class App extends Component {
 	}
 
 	componentDidMount(){
-		fetch(`https://my.api.mockaroo.com/users.json?key=e5eeada0`)
+		fetch(`http://192.168.33.10:4000/getJSON`)
 			.then(res => res.json())
 			.then(
 				(result) => {
